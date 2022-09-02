@@ -1,0 +1,63 @@
+ 学生报名
+ ---
+    tags:
+      - 学生相关
+
+    # 接口路径后面的描述
+    summary: "导师登录操作"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "body"
+      name: "body"
+      description:  "
+      username: 姓名
+      <br>
+      uniLearn:  学号
+      <br>
+      email:  邮箱
+      <br>
+      campus: 校区
+      <br>
+      group: 报名的组
+      <br>
+      interview_time: 面试时间
+      <br>
+      introduce: 面试时间
+       <br>
+      tel: 电话
+      "
+      required: true
+      schema:
+        type: "object"
+        properties:
+          username:
+            type: "string"
+            example : "your username"
+          uniLearn:
+            type: "string"
+            example : "your uniLearn"
+          email:
+            type: "string"
+            example : "xxxxx@qq.com"
+          group:
+            type: "string"
+            example : "前端"
+          campus:
+            type: "string"
+            example : "河西校区"
+          interview_time:
+            type: "string"
+            example : "2021-08-16 23:38:40"
+          introduce:
+            type: "string"
+            example : "自我介绍"
+          tel:
+            type: "string"
+            example : "110110110"
+
+    responses:
+      405:
+        description: "Invalid input"

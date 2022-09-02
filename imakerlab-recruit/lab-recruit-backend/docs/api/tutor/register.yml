@@ -1,0 +1,53 @@
+ 导师注册
+ ---
+    tags:
+      - 导师相关
+
+    # 接口路径后面的描述
+    summary: "Add 2 Numbers"
+    # 参数描述
+
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "body"
+      name: "body"
+      description:  "
+         @username:  请求的用户名
+         <br>
+         @password:  请求的密码
+         <br>
+         @email:  注册邮箱
+         <br>
+         @campus:  校区
+         <br>
+         @qq:  qq号码, 新生接受到邀请函时会显示导师的qq号和姓名
+         <br>
+         @group:  组信息"
+      required: true
+      schema:
+        type: "object"
+        properties:
+          username:
+            type: "string"
+            example : "your username"
+          password:
+            type: "string"
+            example : "your reg password"
+          email:
+            type: "string"
+            example : "xxxxx@qq.com"
+          campus:
+            type: "string"
+            example : "河西校区"
+          qq:
+            type: "string"
+            example : "your reg qq num"
+          group:
+            type: "string"
+            example : "前端"
+    responses:
+      405:
+        description: "Invalid input"
