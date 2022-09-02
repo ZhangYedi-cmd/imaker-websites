@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e9d0ac82-d674-4ae2-9654-f83fbc93be8d" name="imaker">
+        <fileTransfer accessType="SFTP" host="49.232.14.242" port="22" sshConfigId="04d142cc-1aad-4d09-94bb-88bd0c452c69" sshConfig="root@49.232.14.242:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

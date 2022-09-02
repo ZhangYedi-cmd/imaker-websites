@@ -1,0 +1,36 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./server/server.Dockerfile
+    ports:
+      - 3003:8024 # 本地服务映射到80端口
+#    labels:
+#      - traefik.http.routers.server.rule=Host(`www.yedizhang.work`)
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontEnd.Dockerfile
+    ports:
+      - 3001:80 # 本地服务映射到80端口
+#    labels:
+#        - traefik.http.routers.frontend.rule=Host(`tust.imakerlab.work`)
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+    ports:
+      - 3307:3306
+
+  redis1:
+    image: redis
+    ports:
+      - "6380:6379"
+
+#networks:
+#  default:
+#    external:
+#      name: traefik_default
