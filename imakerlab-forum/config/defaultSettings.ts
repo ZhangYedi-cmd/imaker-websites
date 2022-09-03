@@ -12,7 +12,7 @@ const Settings: LayoutSettings & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: '面试鸭',
+  title: "ImakerLAB",
   pwa: false,
   iconfontUrl: 'https://static.mianshiya.com/logo.png',
 };

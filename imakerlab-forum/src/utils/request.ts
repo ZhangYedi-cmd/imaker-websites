@@ -51,10 +51,10 @@ const errorHandler = (error: { response: Response; data: {} }): void => {
 const request = extend({
   errorHandler,
   // credentials: 'include', // 默认请求是否带上cookie
-  prefix:
-    process.env.NODE_ENV === 'production' ? 'http://www.yedizhang.work' : 'http://127.0.0.1:8024',
+  // prefix:
+  //   process.env.NODE_ENV === 'production' ? 'http://www.yedizhang.work' : 'http://127.0.0.1:8024',
 
-  // prefix: 'http://www.yedizhang.work',
+  prefix: 'http://www.yedizhang.work',
 
   // requestType: 'form',
 });

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  recruitbackend:
+    build:
+      context: .
+      dockerfile: ./server/server.Dockerfile
+    ports:
+      - 8020:8080
+
+  recruitfrontend:
+    build:
+      context: .
+      dockerfile: frontEnd.Dockerfile
+    ports:
+      - 3010:80 # 本地服务映射到80端口
